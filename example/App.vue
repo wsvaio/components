@@ -1,37 +1,25 @@
 <script setup lang="ts">
-import { VTable, VTableCtx } from "../dist";
-// import "../dist/index.css";
-import { ElTableColumn } from "element-plus";
-import "element-plus/es/components/table/style/css";
-import "element-plus/es/components/pagination/style/css";
-
-const action = async ({ payload }: VTableCtx) => {
-
-  console.log(payload);
-};
-const data = async (params) => {
-  console.log(params);
-  return {
-    count: 100,
-    items: [
-      {
-        id: 1,
-        name: "a1"
-      },
-      {
-        id: 2,
-        name: "a2"
-      }
-    ]
-  }
-}
+import { MTable, MTableColumn } from "../dist";
+import "../dist/index.css";
 </script>
 
 <template>
-  <h1>Hello</h1>
-
-  <v-table :data="data" :action="action">
-    <el-table-column label="ID" prop="id"></el-table-column>
-    <el-table-column label="NAME" prop="name"></el-table-column>
-  </v-table>
+  <m-table
+    :data="[
+      { id: 1, name: 'ws', age: 198 },
+      { id: 2, name: 'sw', age: 12 },
+      { id: 3, name: 'sw', age: 12 },
+      { id: 4, name: 'sw', age: 12 },
+      { id: 5, name: 'sw', age: 12 },
+    ]"
+  >
+    <m-table-column label="ID" prop="id" sticky></m-table-column>
+    <m-table-column label="NAME" prop="name" :class="['wdf']" #="{ row }">
+      {{ row.name }}
+    </m-table-column>
+    <m-table-column label="AGE" prop="age"></m-table-column>
+    <m-table-column label="SETTING" #="{ row }">
+      <van-button size="mini">修改</van-button>
+    </m-table-column>
+  </m-table>
 </template>

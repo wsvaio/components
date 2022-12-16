@@ -39,14 +39,15 @@
   "dependencies": {
     "@wsvaio/utils": "^0.0.13",
     "element-plus": "^2.2.26",
+    "vant": "^4.0.3",
     "vue": "^3.2.45",
     "vue-request": "^2.0.0-rc.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^9.0.2",
     "@types/node": "^18.11.15",
+    "@vitejs/plugin-vue": "^4.0.0",
     "rollup": "^3.7.4",
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-typescript2": "^0.34.1",

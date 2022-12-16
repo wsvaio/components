@@ -1,6 +1,5 @@
 import { defineConfig } from "rollup";
 import typescript from "rollup-plugin-typescript2";
-import typ from "@rollup/plugin-typescript";
 import vue from "@vitejs/plugin-vue";
 import css from "rollup-plugin-css-only";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
@@ -30,6 +29,6 @@ export default defineConfig([
       typescript({ tsconfigOverride: overrides, check: false }),
       css({ output: "index.css" }),
     ],
-    external: ["vue", "element-plus", "vue-request", "@wsvaio/utils"],
+    external: ["vue", "element-plus", "vue-request", "@wsvaio/utils", "vant"],
   },
 ]);
