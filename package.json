@@ -1,0 +1,57 @@
+{
+  "name": "@wsvaio/components",
+  "version": "0.0.0-0",
+  "description": "封装常用组件",
+  "author": "wsvaio <wsvaio@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/wsvaio/components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsvaio/components.git"
+  },
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
+    "dev": "vite ./example",
+    "prerelease": "npm run build && npm version prerelease && npm publish",
+    "patch": "npm run build && npm version patch && npm publish"
+  },
+  "dependencies": {
+    "@wsvaio/utils": "^0.0.13",
+    "element-plus": "^2.2.26",
+    "vue": "^3.2.45",
+    "vue-request": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^9.0.2",
+    "@types/node": "^18.11.15",
+    "rollup": "^3.7.4",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.1"
+  }
+}
