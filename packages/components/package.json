@@ -1,18 +1,40 @@
 {
-  "name": "@easyest/components",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./index.ts",
-  "scripts": {
-    "build": "vite build",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+  "name": "@wsvaio/components",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "封装一些vue组件",
+  "author": "wsvaio <wsvaio@qq.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/wsvaio",
+  "homepage": "https://github.com/wsvaio/components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsvaio/components.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@easyest/utils": "workspace:^1.0.0"
+  "bugs": {
+    "url": "https://github.com/wsvaio/components/issues"
+  },
+  "keywords": [
+    "wsvaio",
+    "vue",
+    "components"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
+  "types": "dist/lib/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.29.2"

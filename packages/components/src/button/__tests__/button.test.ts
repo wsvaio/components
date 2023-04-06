@@ -1,25 +1,25 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it } from "vitest";
 
-import { mount } from '@vue/test-utils';
-import button from '../button.vue';
+import { mount } from "@vue/test-utils";
+import button from "../button.vue";
 // The component to test
-describe('test button', () => {
-  it('should render slot', () => {
+describe("test button", () => {
+  it("should render slot", () => {
     const wrapper = mount(button, {
       slots: {
-        default: 'easyest'
-      }
+        default: "easyest",
+      },
     });
 
     // Assert the rendered text of the component
-    expect(wrapper.text()).toContain('easyest');
+    expect(wrapper.text()).toContain("easyest");
   });
-  it('should have class', () => {
+  it("should have class", () => {
     const wrapper = mount(button, {
       props: {
-        type: 'primary'
-      }
+        type: "primary",
+      },
     });
-    expect(wrapper.classes()).toContain('ea-button--primary');
+    expect(wrapper.classes()).toContain("ea-button--primary");
   });
 });

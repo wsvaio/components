@@ -1,9 +1,10 @@
+<script lang="ts" setup>
+import { Button as EaButton } from "@easyest/components";
+</script>
+
 <template>
   <div>
     <ea-button>按钮</ea-button>
-    <Button>123</Button>
+    <button>123</button>
   </div>
 </template>
-<script lang="ts" setup>
-import { Button } from '@easyest/components';
-</script>
