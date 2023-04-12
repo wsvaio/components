@@ -18,6 +18,6 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "@easyest/components": "workspace:^1.0.0"
+    "@wsvaio/components": "workspace:^0.0.0"
   }
 }

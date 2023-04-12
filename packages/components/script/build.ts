@@ -19,13 +19,13 @@ export function buildStyle() {
 }
 
 // 打包组件
-export async function buildComponent() {
-  run("pnpm run build", componentPath);
+export function buildComponent() {
+  return run("pnpm run build", componentPath);
 }
 export default series(
   async () => removeDist(),
-  parallel(
-    async () => buildStyle(),
-    async () => buildComponent(),
-  ),
+  async () => {
+    await buildComponent();
+    buildStyle();
+  },
 );

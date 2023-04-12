@@ -3,7 +3,6 @@ import "./style/index.less";
 import { computed } from "vue";
 
 const buttonProps = defineProps<ButtonProps>();
-defineOptions({ name: "ea-button" });
 interface ButtonProps {
   type?: string;
   size?: string;
